@@ -14,8 +14,7 @@ You can find the snapshots of the NIDS in action in the `snapshots` dir.
   <img src="https://github.com/user-attachments/assets/05ccac08-1b31-4d38-a6ef-6b8f96fd70c5" alt="displays" width="40%" />
 </p>
 
-
-
+Open a terminal on the rpi and use the `sudo raspi-config` then navigate to Interfaces to enable I2C connection. 
 Using jumper wires on a bread board connect:<br>
 [NOTE: the serial data and clock will be shared for both the displays.]
 ### SSD1306
@@ -29,11 +28,42 @@ Using jumper wires on a bread board connect:<br>
 - GND to pin 9.
 - VCC to Pin 2.
 
+*Once you wire the hardware, verify the connection `sudo i2cdetect -y` this should display a grid of memory address, LCD should have 0x27 and the oled should have 0x3C memory address.*
+
 ## Script
 You can find the python script in this repository itself. Copy the code and run `sudo python3 lwnids.py` and it will initialize the setup.
 
+## Autamation
+To make it run as soon as it is connected to a network or it reboots, you can run it as a service.
+- sudo nano /etc/systemd/system/nids.service
+```
+[Unit]
+Description=NIDS Monitor
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 /home/pi/lwnids.py
+WorkingDirectory=/home/pi
+StandardOutput=journal
+StandardError=journal
+Restart=always
+RestartSec=5
+User=root
+Environment=PYTHONUNBUFFERED=1
+
+[Install]
+WantedBy=multi-user.target
+```
+- sudo systemctl daemon-reload
+- sudo systemctl enable nids.service
+- sudo systemctl start nids.service
+- sudo systemctl status nids.service
+Once you complete this step verify if it works by rebooting the pi.
+
 ## Testing
-After connecting the raspberry pi and your pc to the same network find the IP address of the rpi. Now send flood the rpi with ping requests from the windows pc : `ping 10.162.241.188 -t`.
+After connecting the raspberry pi and your pc to the same network find the IP address of the rpi. Now flood the rpi with ping requests from the windows pc : `ping 10.162.241.188 -t`.
 You will see the rpi detects it and displays alerts on both the displays.
 - The SSD1306 oled module will display potential attacker's IP address.
 - 1602 LCD module will display the NIDS program console.
