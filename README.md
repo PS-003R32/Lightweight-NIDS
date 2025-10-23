@@ -10,9 +10,10 @@ You can find the snapshots of the NIDS in action in the `snapshots` dir.
 
 ## Hardware setup
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/e3c6f7a7-27d1-463e-ac2a-4967c7eea3d7" alt="GPIO-Pinout-Diagram" width="45%" />
-  <img src="https://github.com/user-attachments/assets/05ccac08-1b31-4d38-a6ef-6b8f96fd70c5" alt="displays" width="45%" />
+  <img src="https://github.com/user-attachments/assets/e3c6f7a7-27d1-463e-ac2a-4967c7eea3d7" alt="GPIO-Pinout-Diagram" width="40%" />
+  <img src="https://github.com/user-attachments/assets/05ccac08-1b31-4d38-a6ef-6b8f96fd70c5" alt="displays" width="40%" />
 </p>
+
 
 
 Using jumper wires on a bread board connect:<br>
