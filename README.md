@@ -33,7 +33,7 @@ Using jumper wires on a bread board connect:<br>
 ## Script
 You can find the python script in this repository itself. Copy the code and run `sudo python3 lwnids.py` and it will initialize the setup.
 
-## Autamation
+## Automation
 To make it run as soon as it is connected to a network or it reboots, you can run it as a service.
 - sudo nano /etc/systemd/system/nids.service
 ```
@@ -44,7 +44,7 @@ Wants=network-online.target
 
 [Service]
 Type=simple
-ExecStart=/usr/bin/python3 /home/pi/lwnids.py
+ExecStart=/usr/bin/python3 /home/pi/lwnids.py <---replace it with the path of the script
 WorkingDirectory=/home/pi
 StandardOutput=journal
 StandardError=journal
