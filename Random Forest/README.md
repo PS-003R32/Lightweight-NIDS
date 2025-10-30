@@ -36,7 +36,7 @@ Using jumper wires on a bread board connect:<br>
 You can use the pickle files in this repository directly or train with wour own dataset using the python script in this repository.
 ### Using pretrained
 Create a new directory in the zero 2w and place the two pickle files, `encoders.pkl` and `nids_model.pkl`, along with the `rpiscript.py` in the same directory and run the script, `sudo python3 rpiscript.py`.<br>
-Let the rpi load the model, you will see it in the cli aswell as the lcd display. After it loads completely open a terminal on your windows pc and flood the rpi with large sized icmp ping req packets, `ping <I.P. of rpi> -t -l 65535`. This will trigger the model running on the pi to detect the attack and display it on the two displays connected to the rpi aswell as the terminal window on the rpi.<br>
+Let the rpi load the model, you will see it in the cli aswell as the lcd display. After it loads completely open a terminal on your windows pc and flood the rpi with large sized icmp ping req packets, `ping <I.P. of rpi> -t -l 65500`. This will trigger the model running on the pi to detect the attack and display it on the two displays connected to the rpi aswell as the terminal window on the rpi.<br>
 
 ### Train with your own data
 To train the model using your own data you can use the python script in the `Model Trainer/trainer.py` to train with your own dataset. To do this rename the `csv` data set path in the `trainer.py` script to generate `pkl` files. then the process is same as mentioned in the above section.
