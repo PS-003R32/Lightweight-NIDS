@@ -1,5 +1,5 @@
 # Lightweight-NIDS (23-10-2025) 
-*[NOTE: This directory has the initial development of the NIDS, this was for initial conceptual understanding. Kindly checkout the latest updated project which uses Random Forest classifier using scikit-learn.]*
+*[NOTE: This directory has the initial development of the NIDS, this was for initial conceptual understanding. Kindly checkout the latest updated project which uses Random Forest classifier using scikit-learn.]* <br>
 This project is a lightweight network intrution detection system which utilizes `hping3` as a subprocess and using a python script to simulate an IDS on a raspberry pi. I have used two displays, one for the nids console and another for displaying potential attacker's IP address. Please note this project is for simulation purpose and is under contineous improvement. 
 You can find the snapshots of the NIDS in action in the `snapshots` dir.
 
