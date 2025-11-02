@@ -6,7 +6,7 @@ This project uses a `raspberry pi zero 2w`, `ssd1306 oled display`, `1602 LCD di
 ### Repository dir structure
 - Simple-Python *[simplest one, can be run on any dev board. ts just a gimmick]*
 - Random Forest classifier *[using scikit-learn, can be run on the zero 2w board flawlessly]*
-- Neural Network classifier *[cant be run on the zero 2w, but i tried... T_T ----But can be run on a pi 4,5 or similar]*
+- Neural Network classifier 
 
 
 ---
