@@ -7,7 +7,7 @@ This project uses a `raspberry pi zero 2w`, `ssd1306 oled display`, `1602 LCD di
 - Simple-Python *[simplest one, can be run on any dev board. ts just a gimmick]*
 - Random Forest classifier *[using scikit-learn, can be run on the zero 2w board flawlessly]*
 
-[NOTE: YOU CAN CHECK OUT THE `armata-nids` REPOSITORY FROM MY PINS WHICH USES PYTHON3-SCAPY AND NEURAL NETWORK CLASSIFIER FOR THE NIDS DEVELOPMENT. USES MINIMAL HARDWARE REQUIREMENTS]   
+[NOTE: YOU CAN CHECK OUT THE `armata-nids` [repo link](https://github.com/PS-003R32/armata-nids) REPOSITORY FROM MY PINS WHICH USES PYTHON3-SCAPY AND NEURAL NETWORK CLASSIFIER FOR THE NIDS DEVELOPMENT. USES MINIMAL HARDWARE REQUIREMENTS]   
 
 
 ---
